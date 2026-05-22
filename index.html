@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POMO-clock</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- font -->
+    <link rel="icon" type="image/png" href="assets/fevicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
@@ -14,41 +14,49 @@
     <div id="app">
         <header>
             <span>POMO-Clock</span>
-            <button>Settings</button>
+            <button id="settings-btn">Settings</button>
         </header>
         <main>
-            <span id="mode-badge">Focus</span>
-
-            <p id="countdown">25:00</p>
-            <p id="status-label">READY</p>
-            <div id="controls">
-                <button id="start-btn">START</button>
-                <button id="pause-btn">PAUSE</button>
-                <button id="reset-btn">RESET</button>
+            <div id="timer-card">
+                <span id="mode-badge">FOCUS</span>
+                <p id="countdown">25:00</p>
+                <p id="status-label">READY</p>
+                <div id="controls">
+                    <button id="start-btn">
+                        <img src="assets/play-button.png" alt="Start" />
+                    </button>
+                    <button id="pause-btn">
+                        <img src="assets/pause-button.png" alt="Pause" />
+                    </button>
+                    <button id="reset-btn">
+                        <img src="assets/reset-button.png" alt="Reset" />
+                    </button>
+                </div>
             </div>
         </main>
         <section id="history">
-            <h2>Today's Sessions</h2>
+            <h2>TODAY'S SESSIONS</h2>
             <ul id="history-list">
-                <li>No Seesion yet</li>
+                <li>No session yet</li>
             </ul>
         </section>
         <div id="settings-modal" class="hidden">
             <div id="settings-card">
-                <h3>Settings</h3>
-
-                <label>Focus(minutes)
+                <h3>SETTINGS</h3>
+                <label>Focus (minutes)
                     <input type="number" id="focus-input" value="25" min="1" max="120"/>
                 </label>
-
                 <label>Break (minutes)
                     <input type="number" id="break-input" value="5" min="1" max="30" />
                 </label>
-
                 <button id="apply-btn">APPLY</button>
                 <button id="cancel-btn">DISCARD CHANGES</button>
             </div>
         </div>
+        <footer>
+            <p>Coded by @Anjana</p>
+        </footer>
     </div>
+    
 </body>
 </html>
