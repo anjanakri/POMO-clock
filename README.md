@@ -28,7 +28,33 @@ Then simply open `index.html` in any browser.
 > No Node.js, npm, or build tools required.
 
 ---
+<h2>🖼️ App Preview</h2>
+<table>
+  <tr>
+    <td align="center" width="860">
+      <h4>🏠 Home-Ready to focus</h4>
+      <img src="preview/main-page-POMO-clock.png" width="600"/>
+        <br></br>
+      <i>The main screen with the countdown timer, mode badge and Minecraft-style control buttons.</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="320">
+      <h4>In Session-Focus session recorded in history</h4>
+      <img src="preview/running-status-with-app-history.png" width="600"/><br></br>
+      <i>Timer running with a completed session logged in today's history below.</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="320">
+      <h4>Settings - Customize your session</h4>
+      <img src="preview/settings-POMO-clock.png" width="400"/><br></br>
+      <i>Settings modal to configure focus and break durations.</i>
+    </td>
+  </tr>
+</table>
 
+---
 ## ✨ Features
 
 | Feature | Description |
