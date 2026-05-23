@@ -2,7 +2,7 @@
 Built as part of the Dev Weekends Fellowship 2026 frontend assessment.
 
 ## 1. How to Run
-No installation needed — this is pure HTML/CSS/JS.
+No installation needed - this is pure HTML/CSS/JS.
 
 **Steps:**
 1. **Clone the repo:**
@@ -16,7 +16,7 @@ cd POMO-clock
 
 **Just Visit**
 
-Deployed URL: https://anjanakri.github.io/POMO-clock/
+**Deployed URL**: https://anjanakri.github.io/POMO-clock/
 
 
 ## 2. Stack & Design Choices
@@ -44,6 +44,15 @@ Deployed URL: https://anjanakri.github.io/POMO-clock/
 ---
 
 ## 3. Responsive & Accessibility
+**On a 360px phone:**
+All font sizes use `clamp()` so the countdown scales from 96px on
+desktop down to ~48px on mobile automatically.
+
+**Accessibility - what I handled:**
+All icon buttons have descriptive `alt` text ("Start", "Pause", "Reset")
+so screen readers announce the action correctly. The settings modal uses
+`display: none` via `.hidden` so it is fully removed from the
+accessibility tree when closed.
 
 
 ## 4. AI Usage
@@ -51,8 +60,16 @@ Deployed URL: https://anjanakri.github.io/POMO-clock/
 | Where | Tool | What I asked | What it gave me |
 |---|---|---|---|
 | Web Audio beep | Claude | "Write a Web Audio API beep with ascending notes for focus end and descending for break end" | A 3-note oscillator chain with gain envelopes |
+| Pixel block buttons | Gemini | Shared the assessment PDF and asked "Design Minecraft-style block buttons for a Pomodoro timer with color-coded actions" | Suggested colored square buttons with `box-shadow` for 3D depth and `:active` press animation |
 
-## 5. What I Would Improve With Another Day
+**Change I made to AI output:**
+For the pixel block buttons, Gemini suggested using three identical
+grey buttons with just different text labels. I changed them to
+color-coded blocks - green for Start, yellow for Pause, red for Reset
+- because color alone communicates the action faster than reading text
+during an active focus session.
+
+## 5. What I Would Improve With Another Day and Honest Gap
 - Add smoother animations during transitions between focus and break sessions
 - Add optional ambient audio features like lo-fi music and subtle ticking sounds to make focus sessions feel more immersive
-
+- The biggest unpolished thing is the mobile layout. On a 360px screen, the timer card padding is generous on desktop but feels cramped on narrow viewports.
